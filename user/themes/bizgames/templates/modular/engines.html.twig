@@ -1,0 +1,16 @@
+<section id="m-{{ page.header.title | hyphenize }}" class="row modular">
+  <div class="container valign-wrapper">
+    <div class="col s12 m6 left-column">
+      <div class="content">
+        <img src="{{ page.media.images|first.url }}" class="center">
+        {{ content }}
+      </div>
+    </div>
+    <div class="col s12 m6 right-column">
+      <div class="content">
+        <img src="{{ page.media.images|last.url }}" class="center">
+        {{ header.custom.content|markdown }}
+      </div>
+    </div>
+  </div>
+</section>

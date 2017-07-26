@@ -1,0 +1,16 @@
+<section id="m-{{ page.header.title | hyphenize }}" class="modular">
+  <h2 class="center-align">{{ page.header.title }}</h2>
+  {{ content }}
+  <div class="owl-carousel {{ page.header.title | hyphenize }} container">
+  {% set classe = 'floating' %}
+    {% for image in page.media.images %}
+      <div class="item"><img src="{{ image.url }}" class="{{ classe }}"></div>
+      {{ dump(classe == 'floating') }}
+      {% if classe == 'floating' %}
+        {% set classe = 'floating-a' %}
+      {% else %}
+        {% set classe = 'floating' %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

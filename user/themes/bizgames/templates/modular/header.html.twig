@@ -1,0 +1,18 @@
+<section id="m-{{ page.header.title | hyphenize }}" class="row header">
+  <ul id="scene">
+    <li class="layer" data-depth="0.1">
+      <div class="layer1"></div>
+    </li>
+    <li class="layer" data-depth="0.15">
+      <div class="layer3"></div>
+    </li>
+    <li class="layer" data-depth="0.3">
+      <div class="layer2"></div>
+    </li>
+    <div id="estrelas"></div>
+  </ul>
+  <div class="wrapper">
+    <img alt="logo" src="{{ page.media['logo.png'].url }}"><br>
+    {{content}}
+  </div>
+</section>

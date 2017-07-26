@@ -1,0 +1,12 @@
+email: midiassociais@jnmoura.com.br
+fullname: 'Moura Informatica'
+title: Administrador
+state: enabled
+access:
+  admin:
+    super: 'true'
+    login: 'true'
+  site:
+    login: 'true'
+hashed_password: $2y$10$qw/tv8A6v6do53JaraSbie7S/1nOqxoh4/UO2H/1kP4LkKl2DpGjq
+language: pt

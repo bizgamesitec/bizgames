@@ -1,0 +1,22 @@
+name: Biz Games
+version: 1.0.0
+description: "A **Moura Informática** é uma software house que desenvolve tecnologias inovadoras para gestão de negócios"
+icon: gamepad
+author:
+  name: Moura Informatica
+  email: midiassociais@jnmoura.com.br
+  url: http://www.jnmoura.com.br
+
+# form:
+#   validation: loose
+#   fields:
+#     dropdown.enabled:
+#         type: toggle
+#         label: Dropdown in navbar
+#         highlight: 1
+#         default: 1
+#         options:
+#           1: PLUGIN_ADMIN.ENABLED
+#           0: PLUGIN_ADMIN.DISABLED
+#         validate:
+#           type: bool

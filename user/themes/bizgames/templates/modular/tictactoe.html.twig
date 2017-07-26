@@ -1,0 +1,47 @@
+<section id="m-{{ page.header.title | hyphenize }}" class="row modular">
+  <div class="container valign-wrapper">
+    <div class="col s12 m6">
+      <div class="board">
+        <div class="board__row">
+          <input class="board__slot-hidden" type="radio"/>
+          <label class="board__slot" id="0"></label>
+          <input class="board__slot-hidden" type="radio"/>
+          <label class="board__slot" id="1"></label>
+          <input class="board__slot-hidden" type="radio"/>
+          <label class="board__slot" id="2"></label>
+        </div>
+        <div class="board__row">
+          <input class="board__slot-hidden" type="radio"/>
+          <label class="board__slot" id="3"></label>
+          <input class="board__slot-hidden" type="radio"/>
+          <label class="board__slot" id="4"></label>
+          <input class="board__slot-hidden" type="radio"/>
+          <label class="board__slot" id="5"></label>
+        </div>
+        <div class="board__row">
+          <input class="board__slot-hidden" type="radio"/>
+          <label class="board__slot" id="6"></label>
+          <input class="board__slot-hidden" type="radio"/>
+          <label class="board__slot" id="7"></label>
+          <input class="board__slot-hidden" type="radio"/>
+          <label class="board__slot" id="8"></label>
+        </div>
+        <a id="reload" class="btn red lighten-1"><i class="fa fa-refresh" aria-hidden="true"></i> Zerar</a>
+      </div>
+    </div>
+    <div class="col s12 m6">
+      {{ content }}
+    </div>
+  </div>
+</section>
+
+<div class="absolute above">
+  <div class="container">
+        <div class="planettwo rellax"
+          data-rellax-speed="10">
+        </div>
+        <div class="planettree rellax"
+          data-rellax-speed="5">
+        </div>
+  </div>
+</div>

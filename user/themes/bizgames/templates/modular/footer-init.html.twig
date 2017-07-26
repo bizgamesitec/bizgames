@@ -1,0 +1,23 @@
+{% set links = header.custom.links|split(',') %}
+
+{% if page.media['footer-init.png'] %}
+  <img id="footerinit-img" src="{{ page.media['footer-init.png'].url }}" class="responsive-img">
+{% endif %}
+<div id="footerinit">
+    <div class="container">
+        {{ content }}
+        {% if page.media.images|length > 1 %}
+          <div class="row valign-wrapper">
+            {% set columns = 12 / (page.media.images|length - 1) %}
+            {% set count = 0 %}
+            {% for image in page.media.images %}
+              {{ dump(image) }}
+              {% if image.basename != 'footer-init' %}
+                <div class="col s12 m{{ columns }} center-align"><a href="{{ links[count] }}" target="_blank">{{ image.html('','','responsive-img') }}</a></div>
+                {% set count = count + 1 %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+    </div>
+</div>

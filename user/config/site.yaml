@@ -1,0 +1,17 @@
+title: 'Biz Games'
+default_lang: pt-br
+author:
+  name: 'Moura Informática'
+  email: midiassociais@jnmoura.com.br
+taxonomies:
+  - category
+  - tag
+metadata:
+  description: 'O Biz Games é um projeto que leva a lógica de programação por meio de jogos educacionais para crianças de escolas do ensino fundamental e médio de Araraquara, SP.'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog

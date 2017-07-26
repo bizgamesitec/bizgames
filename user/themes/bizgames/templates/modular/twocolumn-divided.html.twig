@@ -1,0 +1,11 @@
+<section id="m-{{ page.header.title | hyphenize }}" class="row modular">
+  <h2 class="center">{{ page.header.title }}</h2>
+  <div class="container valign-wrapper">
+    <div class="col m12 l6 imagem">
+      {% for image in page.media.images|reverse %}
+        {{ image.html('','', image.basename) }}
+      {% endfor %}
+    </div>
+    <div class="col m12 l6 conteudo">{{ content }}</div>
+  </div>
+</section>

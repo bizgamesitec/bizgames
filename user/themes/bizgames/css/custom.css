@@ -1,0 +1,761 @@
+@font-face {
+  font-family: 'Space Age';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/space-age.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url('../fonts/MaterialIcons-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/opensans.woff2') format('woff2');
+}
+
+html, body, a, p {
+  font-family: 'Open Sans', 'Roboto', sans-serif !important;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+html, body {
+  max-width: 100% !important;
+  width: 100% !important;
+  overflow-x: hidden !important;
+  color: #FFF;
+}
+
+object {
+  display: none;
+}
+
+body, nav {
+  background: #070707 !important;
+}
+
+.center {
+  display: table !important;
+  margin: 0 auto;
+}
+
+/*.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}*/
+
+/* Responsive  */
+@media (min-width: 1401px) {
+  .planettree {
+    margin-left: 1100px !important;
+  }
+}
+@media (max-width: 1400px) {
+  .container {
+    width: 80% !important;
+  }
+}
+@media (max-width: 600px) {
+  .row .col.s12,
+  .row .col.m12 {
+    width: 100% !important
+  }
+  .header h1 {
+    font-size: 1.7em !important;
+  }
+  .footer-copyright .col {
+    margin-top: 20px;
+  }
+  footer .col {
+    text-align: center !important;
+  }
+  .earth, .planetfive {
+    margin-left: -100px !important;
+  }
+  .planetone {
+    margin-left: -50px !important;
+  }
+  .planetfour {
+    margin-left: 350px !important;
+  }
+  .valign-wrapper {
+    display: initial !important;
+  }
+  #footerinit .row .s12 {
+    margin-top: 10px !important;
+  }
+  #scene {
+    width: 100% !important;
+    left: 0 !important;
+  }
+  .absolute.above, nav, #scene .layer {
+    display: none !important;
+  }
+}
+@media (max-width: 400px) {
+  h2 {
+    font-size: 2.5rem !important;
+  }
+}
+
+/* Animation */
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.slideRight {
+  animation-name: slideRight;
+}
+@keyframes slideRight {
+  0% {
+    transform-origin: 0 0;
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform-origin: 0 0;
+    transform: translateX(100%);
+  }
+}
+/* Custom */
+/* ===== Parallax ===== */
+#overlay {
+    background-color: #000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    opacity: 0.08;
+}
+
+#scene {
+    padding: 0;
+    margin: 0;
+    width: 115%;
+    height: 120vh;
+    overflow: hidden;
+    top: -5%;
+    left: -5%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 101;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.wrapper img {
+  width: 450px;
+  height: auto;
+}
+
+.layer {
+    width: 110%;
+    height: 120vh;
+    overflow: hidden;
+}
+
+.layer3 {
+    background-image: url('../images/layer2.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -5%;
+    top: -5%;
+}
+
+.layer2 {
+    background-image: url('../images/layer1.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -5%;
+    top: -5%;
+}
+
+.layer1 {
+    background-image: url('../images/layer0.png');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -5%;
+    top: -5%;
+}
+
+@media (max-width:1200px) and (min-width:700px) {
+     .wrapper img {
+        width: 320px;
+        height: auto;
+    }
+}
+
+@media (max-width:700px) {
+    .layer2 {
+        background-size: cover;
+        background-position: center;
+        width: 167%;
+        height: 77vh;
+        left: -69%;
+        top: 27%;
+    }
+
+    .layer1 {
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 115%;
+        left: -5%;
+        top: -1%;
+    }
+
+    .wrapper img {
+        width: 280px;
+        height: auto;
+    }
+}
+
+/* ===== RELLAX ===== */
+#m-sobre .absolute.above {
+  left: 0;
+}
+/*----------------------------------
+  Background Grid
+------------------------------------*/
+.grid {
+  position: fixed;
+  width: 100%;
+}
+.grid-line {
+  height: 100vh;
+  border-left: 1px solid #ccc;
+}
+
+.fixed-top {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: #00F1C9;
+  border-radius: 12px;
+  z-index: -1;
+  margin-top: -220px;
+  margin-left: 100px;
+}
+
+main,
+.main {
+  overflow: hidden;
+}
+
+.section {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  /*width: 100%;*/
+  /*height: auto;*/
+  margin-top: 100px;
+}
+.absolute.above,
+.absolute.above .container {
+  height: 1px;
+  display: grid;
+}
+.absolute.above {
+  z-index: 2;
+}
+.absolute h2 {
+  font-size: 140px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: #F0F0F0;
+  z-index: -1;
+}
+.earth {
+  width: 160px;
+  height: 160px;
+  background: url('../images/planets/earth.png') center center no-repeat;
+  /*margin-left: -80px;*/
+  margin-left: 100px;
+  margin-top: 200px;
+}
+.planetone {
+  width: 115px;
+  height: 100px;
+  background: url('../images/planets/planetone.png') center center no-repeat;
+  /*margin-left: -30px;*/
+  margin-left: 100px;
+  margin-top: 200px;
+}
+.planettwo {
+  width: 225px;
+  height: 150px;
+  background: url('../images/planets/planettwo.png') center center no-repeat;
+  /*margin-left: -30px;*/
+  margin-left: 1000px;
+  margin-top: 600px;
+}
+.planettree {
+  width: 150px;
+  height: 115px;
+  background: url('../images/planets/planettree.png') center center no-repeat;
+  margin-left: 950px;
+  margin-top: -200px;
+}
+.planetfour {
+  width: 110px;
+  height: 130px;
+  background: url('../images/planets/planetfour.png') center center no-repeat;
+  margin-left: 1100px;
+  margin-top: 2100px;
+}
+.planetfive {
+  width: 155px;
+  height: 125px;
+  background: url('../images/planets/planetfive.png') center center no-repeat;
+  margin-left: -120px;
+  margin-top: 1500px;
+}
+
+
+@-webkit-keyframes fuzz /* Safari and Chrome */ {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    /*-webkit-transform: scaleY(1);*/
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fuzz2 /* Safari and Chrome */ {
+  0% {
+    opacity: 0;
+  }
+  48% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fuzz3 /* Safari and Chrome */ {
+  0% {
+    opacity: 0;
+  }
+  54% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes stretch /* Safari and Chrome */ {
+  0% {
+    -webkit-transform: scaleX(0);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scaleX(0);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+  }
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ===== Stars ===== */
+#estrelas {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+#stars {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.stars {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.stars.star-2 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.stars.star-3 {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+.stars.star-4 {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.stars.star-5 {
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+.star {
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  position: absolute;
+  fill: #ffffff;
+}
+.star:nth-child(3n+3) {
+  fill: #FEC777;
+}
+.star:nth-child(5n+5) {
+  fill: #498FB3;
+}
+
+@-webkit-keyframes zoom {
+  0% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes zoom {
+  0% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* ===== TIC TAC TOE ===== */
+/* TOAST */
+#toast-container {
+  top: auto !important;
+  right: auto !important;
+  bottom: 10%;
+  left:45%;
+}
+
+.board label:before {
+  border: none !important;
+}
+.board-default, .board{
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 30px;
+  /*background-color: rgba(255, 255, 255, 0.4);*/
+}
+.board-default:before, .board:before, .board__settings:before, .board__difficulty:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  border-radius: 51px;
+  border: 15px solid rgba(0, 0, 0, 0.05);
+}
+@media (min-width: 450px) {
+  .board-default, .board, .board__settings, .board__difficulty {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.board {
+  position: relative;
+  margin: 40px auto;
+}
+
+.board__wrapper {
+  display: inline-flex;
+}
+
+.board__row {
+  display: block;
+}
+
+.board__slot-hidden {
+  display: none;
+}
+
+.board__slot {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 5px;
+}
+@media (min-width: 450px) {
+  .board__slot {
+    height: 110px;
+    width: 110px;
+    border-radius: 30px;
+  }
+}
+.board__slot:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.board__slot:active {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.nought:before, .cross:before {
+  font-family: 'FontAwesome';
+  font-size: 3em;
+  position: absolute;
+  top: 15px !important;
+  top: 40px;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  cursor: default;
+}
+@media (min-width: 450px) {
+  .nought:before, .cross:before {
+    font-size: 5em;
+    /*top: 15px;*/
+  }
+}
+@media (min-width: 600px) {
+  .nought::before, .cross::before {
+    top: 40px !important;
+  }
+}
+
+.nought:before {
+  content: "";
+}
+
+.cross:before {
+  content: "";
+}
+
+.computer-color {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.player-color {
+  color: white;
+}
+
+/* ===== NAV ===== */
+nav a {
+  font-family: 'Space Age', 'Open Sans', sans-serif !important;
+}
+
+nav a i {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+nav a:hover i {
+  opacity: 1;
+}
+
+/* ===== BUTTON STYLES ===== */
+.btn-bordered {
+  padding: 10px 15px;
+  border: 1px solid #FFF;
+  border-radius: 10px;
+  color: #FFF;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.btn-bordered.icones {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+.btn-bordered:hover {
+  background: #FFF;
+  color: #070707;
+}
+/* ===== TITLES ===== */
+h2 {
+  font-family: 'Space Age', 'Open Sans', sans-serif !important;
+}
+
+/* ===== SECTIONS ===== */
+#m-sobre p {
+  line-height: 1.8em;
+  /* letter-spacing: 0.15em; */
+  text-align: justify;
+}
+#m-jogos h2 {
+  font-size: 2.5rem;
+}
+/* === ENGINES === */
+#m-engines .col {
+  padding: 20px 40px;
+}
+#m-engines .col .content {
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.06);
+}
+#m-engines .content img {
+  margin-bottom: 25px;
+}
+#m-engines {
+  color: #666;
+}
+#m-engines blockquote {
+  border-color: #FF3442 !important;
+}
+/* === FALTAM === */
+#faltam .col {
+  text-align: center;
+}
+#faltam .timer {
+  font-family: 'Space Age', 'Open Sans', sans-serif !important;
+  font-size: 3rem;
+}
+/* ===== FOOTER ===== */
+footer hr {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #FF3442, #FFF, #FF3442);
+  background-image: -moz-linear-gradient(left, #FF3442, #FFF, #FF3442);
+  background-image: -ms-linear-gradient(left, #FF3442, #FFF, #FF3442);
+  background-image: -o-linear-gradient(left, #FF3442, #FFF, #FF3442);
+}
+footer .row {
+  margin-bottom: 10px !important;
+}
+#footerinit .row {
+  margin-bottom: 0 !important;
+}
+footer .container {
+  padding-bottom: 20px;
+}
+#footerinit, .page-footer {
+  background: #FF3442 !important;
+}
+#footerinit {
+  margin-top: -25px;
+}
+#footerinit .row,
+footer .row {
+  margin-top: 15px;
+}
+#footerinit h2 {
+  margin: 0 !important;
+  padding: 1.78rem 0 1.424rem 0 !important;
+  font-size: 2.5rem;
+}
+#footerinit p {
+  margin: 0 !important;
+}
+.footer-copyright {
+  background: #070707 !important;
+  border-radius: 20px;
+  padding: 20px !important;
+}
+#frase h5 {
+  font-size: 1.3em;
+}

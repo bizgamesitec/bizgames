@@ -1,0 +1,56 @@
+{{ "now"|date("Y") }}
+{{ config.site.title }}
+{{ page.media.images|first.url }}
+{{ page.media['provadorHand.png'].url }}
+{{ url('theme://images/developer.png') }}
+{{ image.html('','', 'animated fadeInLeft ' ~ image.basename) }}
+{% if header.title %}{{ header.title|e('html') }} | {% endif %}
+{{ base_url }}
+{{ base_url_absolute }}
+{{ dump(site) }}
+{{ site.author.name }}
+{{ header.custom.links[0] }}
+{% set links = header.custom.links|split(',') %}
+
+
+<ul id="scene">
+  {% set depth = 1 / page.media.images|length %}
+  {% set increment = depth %}
+  {% for image in page.media.images %}
+    <li class="layer" data-depth="{{ depth }}"><div class="" style="background-image: url('{{ image.url }}')"></li>
+    {% set depth = depth + increment %}
+  {% endfor %}
+</ul>
+
+# ==================== CUSTOM FIELDS ====================
+# ========== nome-da-pagina.md em .yaml na pasta blueprints ==========
+title: Page Content
+@extends:
+  type: default
+  context: blueprints://pages
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          type: tab
+          fields:
+            #
+            # Custom text field
+            #
+            header.custom.links:
+              type: text
+              label: Links
+            #
+            # Cover image
+            #
+            # header.custom.coverImage:
+            #   type: file
+            #   label: Cover image
+            #   destination: 'self@'
+            #   multiple: false
+            #   accept:
+            #     - image/*
+# ==================== END CUSTOM FIELDS ====================
